@@ -1,0 +1,52 @@
+Strategy Nice
+    return Honest
+
+Strategy Bad
+    return Cheat
+
+Strategy TitForTat
+    if last == Undef 
+        return Honest
+    else
+        return last
+
+Strategy TitForTatBad 
+    if last == Undef 
+        return Cheat
+    else
+        return last
+
+Strategy Majority 
+    def good = 0
+    def bad = 0
+    
+    if last == Honest
+        good = good + 1;
+    if last == Cheat
+        bad = bad + 1;
+    if good > bad
+        return Honest
+    else 
+        return Cheat
+
+Strategy Grim
+    def decision = Honest
+
+    if last == Cheat
+        decision = Cheat;
+    return decision
+
+Strategy Rand
+    if Random(2) < 1
+        return Cheat
+    else
+        return Honest
+
+
+Constants
+    duration = 10
+    rewardHH = 3 rewardHC = 0
+    rewardCH = 5 rewardCC = 1
+    initial = 1000
+    meetings = 1000 intervals = 1000
+    life = 10 spawn = 7 mutation = 10
