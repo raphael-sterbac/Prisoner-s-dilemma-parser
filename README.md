@@ -1,9 +1,4 @@
-# Projet de Langages formels
-
-- Niveau Choisi : Niveau 3
-- Groupe : Ivan Cuezva et Raphaël Sterbac
-
-## Descriptif du projet
+# Descriptif du projet
 
 Le projet est découpé en plusieurs fichiers :
 
@@ -14,15 +9,13 @@ programme en entrée.
 la création de l'AST (abstract syntax tree). Ce fichier contient aussi tout le code
 relatif à la simulation des stratégies, ainsi que celle des populations d'agents.
 
-## Compilation et execution du projet
+# Compilation et execution du projet
 
 Pour compiler le projet, il faut lancer la commande `make langlex.c && make lang`,
 qui donnera un exécutable `lang`. Pour lancer le projet, il faut donc appeler :
 `./lang test` où test est un fichier de test contenant un programme.
 
-## Choix d'implémentation
-
-### Niveau 1
+# Choix d'implémentation
 
 Nous avons choisi d'implémenter l'AST de la manière suivante :
 
@@ -48,7 +41,7 @@ Pour la priorité des opérateurs, on a choisi de donner une priorité droite
 pour le `IF` et le `ELSE`, avec une priorité supérieure au `ELSE`. Cela permet
 donc de traiter correctement le cas du "dangling else".
 
-### Niveau 2
+## Niveau 2
 
 Pour le niveau 2, nous avons implémenté des fonctions `eval_term` et `execute`
 qui interprètent une expression et exécutent le code des statements. Ainsi, dans 
@@ -59,7 +52,7 @@ Le code du niveau 2 est contenu dans le fichier `niveau2.y`. Il est possible que
 certains bugs aient été réglé à postériori dans le niveau 3, mais cela donne
 une idée du travail fourni pour le niveau 2.
 
-### Niveau 3
+## Niveau 3
 
 Pour le niveau 3, nous avons écrit une fonction `meet` qui organise les rencontres
 entre les agents, et affiche les infomations dans l'entrée standard.
